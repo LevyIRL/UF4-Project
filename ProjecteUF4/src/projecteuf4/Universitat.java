@@ -119,4 +119,34 @@ public class Universitat {
             llistaMembres.remove(searchDni(dni));
         }
     }
+
+    public void showAssignatures(){
+        int qtyEnroll;
+        System.out.println("== ASSIGNATURES QUE OFEREIX LA UNIVERSITAT AMB MEMBRES PARTICIPANTS ==");
+        for (String i : assignatures) {
+            qtyEnroll = 0;
+            System.out.println("==" + i + "==");
+            for (Membre j : llistaMembres) {
+                if(j instanceof Professor){
+                    for (String k : ((Professor) j).getMateriesImpartides()) {
+                        if(k.equals(i)){
+                            System.out.println("- Professor: " + j.getNom() + " " + j.getCognoms());
+                            qtyEnroll++;
+                        }
+                    }
+                }else if(j instanceof Alumne){
+                    for (String k : ((Alumne) j).getMateriesMatriculat()) {
+                        if(k.equals(i)){
+                            System.out.println("- Alumne: " + j.getNom() + " " + j.getCognoms());
+                            qtyEnroll++;
+                        }
+                    }
+                }
+            }
+            if (qtyEnroll == 0) {
+                System.out.println("No hi ha ningún professor ni alumne per aquesta assignatura!");
+            }
+            System.out.println("");
+        }
+    }
 }
