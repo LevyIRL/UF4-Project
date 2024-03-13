@@ -19,21 +19,27 @@ public class Main {
         uni.addMateria("M04");
         uni.addMateria("M05");
 
-        Professor prof1 = new Professor("12345678A", "nomprof1", "cognom1prof1 cognom2prof1", 2018);
-        prof1.addMateria("M01", uni);
+        Professor prof1 = new Professor("111", "Jordi", "Soto", 2010);
         prof1.addMateria("M02", uni);
-        prof1.addMateria("M06", uni);
 
-        Alumne alum1 = new Alumne("12345678B", "nomalum1", "cognom1alum1 cognom2alum1");
-        alum1.addMateria("M01", uni);
+        Professor prof2 = new Professor("222", "David", "Martínez", 2013);
+        prof1.addMateria("M03", uni);
 
-        Becat beca1 = new Becat("12345678C", "nombeca1", "cognom1beca1 cognom2beca1", "skibidi");
+        Alumne alum1 = new Alumne("333", "Aran", "Casanoves");
+        alum1.addMateria("M02", uni);
+        alum1.addMateria("M03", uni);
+
+
+        Becat beca1 = new Becat("444", "Blai", "Massana", "Beca Erasmus");
         beca1.addMateria("M02", uni);
+        beca1.addMateria("M03", uni);
 
-        Doctorat doct1 = new Doctorat("12345678D", "nomdoct1", "cognom1doct1 cognom2doct1", prof1, 2023, "sigma");
-        doct1.addMateria("M04", uni);
+        Doctorat doct1 = new Doctorat("555", "Roc", "Tomás", prof1, 2023, "Contracte Precari");
+        doct1.addMateria("M06", uni);
 
         uni.addMember(prof1);
+        uni.addMember(prof2);
+        uni.addMember(prof2);
         uni.addMember(alum1);
         uni.addMember(beca1);
         uni.addMember(doct1);
@@ -71,7 +77,7 @@ public class Main {
                     }
                     break;
                 case 7:
-                    
+                    uni.showAssignatures();
                     break;
                 case 8:
                     actiu = false;
