@@ -30,3 +30,4 @@ public class Becat extends Alumne{
         System.out.println("▪ Tipus de beca:" + this.getTipusBeca());
     }
 }
+

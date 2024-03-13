@@ -48,3 +48,4 @@ public class Doctorat extends Alumne{
         System.out.println("▪ Tipus de Contracte: " + this.tipusContracte);
     }
 }
+
