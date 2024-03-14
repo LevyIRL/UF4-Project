@@ -3,7 +3,7 @@ package projecteuf4;
 import java.util.ArrayList;
 
 public class Alumne extends Membre{
-    ArrayList <String> materiesMatriculat = new ArrayList<String>();
+    private ArrayList <String> materiesMatriculat = new ArrayList<String>();
 
     public ArrayList<String> getMateriesMatriculat() {
         return materiesMatriculat;
@@ -20,13 +20,13 @@ public class Alumne extends Membre{
 
     @Override
     public String toString(){
-        return "Alumne\t\t[dni=" + dni + ", nom=" + nom + ", cognoms=" + cognoms + ", materiesMatriculat=" + materiesMatriculat + "]";
+        return "Alumne\t\t[dni=" + this.getDni() + ", nom=" + this.getNom() + ", cognoms=" + this.getCognoms() + ", materiesMatriculat=" + this.getMateriesMatriculat() + "]";
     }
 
     @Override
     public void addMateria(String afegir, Universitat membreDe){
         boolean exists = false;
-        for (String i : membreDe.assignatures) {
+        for (String i : membreDe.getAssignatures()) {
             if(i.equals(afegir)){
                 exists = true;
             }

@@ -3,9 +3,9 @@ package projecteuf4;
 import java.util.ArrayList;
 
 public class Universitat {
-    String nom;
-    ArrayList <Membre> llistaMembres = new ArrayList<Membre>();
-    ArrayList <String> assignatures = new ArrayList<String>();
+    private String nom;
+    private ArrayList <Membre> llistaMembres = new ArrayList<Membre>();
+    private ArrayList <String> assignatures = new ArrayList<String>();
 
     public String getNom() {
         return nom;

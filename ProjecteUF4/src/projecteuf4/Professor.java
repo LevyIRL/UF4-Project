@@ -3,8 +3,8 @@ package projecteuf4;
 import java.util.ArrayList;
 
 public class Professor extends Membre{
-    int anyInici;
-    ArrayList <String> materiesImpartides ;
+    private int anyInici;
+    private ArrayList <String> materiesImpartides ;
     public int getAnyInici() {
         return anyInici;
     }
@@ -27,7 +27,7 @@ public class Professor extends Membre{
     @Override
     public void addMateria(String afegir, Universitat membreDe){
         boolean exists = false;
-        for (String i : membreDe.assignatures) {
+        for (String i : membreDe.getAssignatures()) {
             if(i.equals(afegir)){
                 exists = true;
             }
@@ -41,7 +41,7 @@ public class Professor extends Membre{
 
     @Override
     public String toString() {
-        return "Professor\t[dni=" + dni + ", nom=" + nom + ", cognoms=" + cognoms + ", anyInici=" + anyInici + ", materiesImpartides=" + materiesImpartides + "]";
+        return "Professor\t[dni=" + this.getDni() + ", nom=" + this.getNom() + ", cognoms=" + this.getCognoms() + ", anyInici=" + this.getAnyInici() + ", materiesImpartides=" + this.getMateriesImpartides() + "]";
     }
 
     @Override

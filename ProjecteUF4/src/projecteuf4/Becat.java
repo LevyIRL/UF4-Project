@@ -1,6 +1,6 @@
 package projecteuf4;
 
-public class Becat extends Alumne{
+public class Becat extends Alumne {
     String tipusBeca;
 
     public String getTipusBeca() {
@@ -17,12 +17,13 @@ public class Becat extends Alumne{
     }
 
     @Override
-    public String toString(){
-        return "Alumne Becat\t[dni=" + dni + ", nom=" + nom + ", cognoms=" + cognoms + ", materiesMatriculat=" + materiesMatriculat + ", tipusBeca=" + tipusBeca + "]";
+    public String toString() {
+        return "Alumne Becat\t[dni=" + this.getDni() + ", nom=" + this.getNom() + ", cognoms=" + this.getCognoms()
+                + ", materiesMatriculat=" + this.getMateriesMatriculat() + ", tipusBeca=" + this.getTipusBeca() + "]";
     }
 
     @Override
-    public void showMember(){
+    public void showMember() {
         System.out.println("== ALUMNE BECAT ==");
         System.out.println("▪ DNI:\t\t" + this.getDni());
         System.out.println("▪ Nom:\t\t" + this.getNom());
@@ -30,5 +31,3 @@ public class Becat extends Alumne{
         System.out.println("▪ Tipus de beca:" + this.getTipusBeca());
     }
 }
-
-

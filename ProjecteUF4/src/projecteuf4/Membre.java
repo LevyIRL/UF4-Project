@@ -1,9 +1,9 @@
 package projecteuf4;
 
 public abstract class Membre {
-    String dni;
-    String nom;
-    String cognoms;
+    private String dni;
+    private String nom;
+    private String cognoms;
     
     @Override
     public String toString() {
