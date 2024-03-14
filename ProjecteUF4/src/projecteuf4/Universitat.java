@@ -61,7 +61,7 @@ public class Universitat {
     public void showAlumnes(){
         System.out.println("========== LLISTAT D'ALUMNES DE L'UNIVERSITAT ==========");
         for (Membre i : llistaMembres) {
-            if(i.getClass().getSimpleName().equals("Alumne") || i.getClass().getSimpleName().equals("Becat") || i.getClass().getSimpleName().equals("Doctorat")){
+            if(i instanceof Alumne){
                 i.showMember();
                 System.out.println();
             }
@@ -72,7 +72,7 @@ public class Universitat {
     public void showDoctorat(){
         System.out.println("========== LLISTAT D'ALUMNES DE DOCTORAT ==========");
         for (Membre i : llistaMembres) {
-            if(i.getClass().getSimpleName().equals("Doctorat")){
+            if(i instanceof Doctorat){
                 i.showMember();
                 System.out.println();
             }
@@ -83,7 +83,7 @@ public class Universitat {
     public void showProfessors(){
         System.out.println("========== LLISTAT DE PROFESSORS DE L'UNIVERSITAT ==========");
         for (Membre i : llistaMembres) {
-            if(i.getClass().getSimpleName().equals("Professor")){
+            if(i instanceof Professor){
                 i.showMember();
                 System.out.println();
             }
