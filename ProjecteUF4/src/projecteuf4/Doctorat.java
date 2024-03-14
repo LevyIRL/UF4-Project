@@ -24,8 +24,7 @@ public class Doctorat extends Alumne{
         this.tipusContracte = tipusContracte;
     }
     
-    public Doctorat(String dni, String nom, String cognoms, Professor director,
-            int anyInici, String tipusContracte) {
+    public Doctorat(String dni, String nom, String cognoms, Professor director, int anyInici, String tipusContracte) {
         super(dni, nom, cognoms);
         this.director = director;
         this.anyInici = anyInici;
@@ -44,8 +43,8 @@ public class Doctorat extends Alumne{
         System.out.println("▪ Nom:\t\t" + this.getNom());
         System.out.println("▪ Cognoms:\t" + this.getCognoms());
         System.out.println("▪ Tutor:\t" + this.director.getNom());
-        System.out.println("▪ Any d'inici:\t" + this.anyInici);
-        System.out.println("▪ Tipus de Contracte: " + this.tipusContracte);
+        System.out.println("▪ Any d'inici:\t" + this.getAnyInici());
+        System.out.println("▪ Tipus de Contracte: " + this.getTipusContracte());
     }
 }
 
