@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Universitat {
     private String nom;
-    private ArrayList <Membre> llistaMembres = new ArrayList<Membre>();
-    private ArrayList <String> assignatures = new ArrayList<String>();
+    private ArrayList <Membre> llistaMembres;
+    private ArrayList <String> assignatures;
 
     public String getNom() {
         return nom;
@@ -31,13 +31,10 @@ public class Universitat {
         this.llistaMembres = llistaMembres;
     }
 
-    public Universitat(String nom, ArrayList<String> assignatures) {
+    public Universitat(String nom) {
         this.nom = nom;
-        this.assignatures = assignatures;
-    }
-    
-    public Universitat(String nom){
-        this.nom = nom;
+        this.assignatures = new ArrayList<>();
+        this.llistaMembres = new ArrayList<>();
     }
 
     public void showMembres(){
